@@ -13,7 +13,7 @@ crate-type = ["staticlib","rlib"]
 [features]
 default = ["pair_amcl", "serialization"]
 pair_amcl = ["amcl"]
-#serialization = ["serde", "serde_json", "serde_derive"]
+serialization = ["serde", "serde_json", "serde_derive"]
 
 [dependencies]
 amcl = { version = "0.1.2",  optional = true, default-features = false, features = ["BN254"]}
@@ -21,6 +21,6 @@ log = "0.3.7"
 rand = "0.3"
 sha2 = "0.6.0"
 env_logger = "0.4.3"
-#serde = { version = "1.0",  optional = true}
-#serde_json = { version = "1.0",  optional = true}
-#serde_derive = { version = "1.0",  optional = true}
+serde = { version = "1.0",  optional = true}
+serde_json = { version = "1.0",  optional = true}
+serde_derive = { version = "1.0",  optional = true}
